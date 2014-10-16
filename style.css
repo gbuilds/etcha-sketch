@@ -1,14 +1,24 @@
-div {
-	padding, margin: 0;
-}
-
 .box {
 	float: left;
 	background-color: yellow;
 }
 
-.selected {
-	
+header {
+	text-align: center;
+}
+
+.button {
+	width: 80px;
+	display: inline-block;
+	border-radius: 4px;
+	background-color: #999;
+	border: 3px solid #444;
+	margin: 10px 5px;
+	padding: 2px;
+	font: 10px sans-serif;
+	font-weight: bold;
+	color: white;
+	text-align: center;
 }
 
 .wrap {
@@ -19,4 +29,7 @@ div {
 h1 {
 	font-family: sans-serif;
 	text-align: center;
+	padding: 10px;
+	margin: 0;
+	display: inline-block;
 }
