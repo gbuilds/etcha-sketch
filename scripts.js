@@ -5,11 +5,14 @@ $(document).ready(function() {
 // Creating a grid
 
 function createGrid(x) {
-	
+
+if (21 > x && x > 0) {
+
 	for (var i = 0; i < (x * x); i++) {
 	
 	$('.wrap').append('<div class="box"></div>');
-	}
+	};
+};
 
 // Sizing each box within wrap div
 
@@ -25,13 +28,14 @@ $('.box').mouseenter(function() {
 $(this).fadeTo("slow", .2);
 });
 
-// Reset button for all boxes
+// Reset opacity for all boxes
 
 $('.reset').click(function() {
 $('.box').css("opacity", 1);
 });
 
-// Prompt button asks for number of boxes
+// Reset button removes old grid and 
+// asks for a custom number of boxes
 
 $('.changegrid').click(function() {
 	removeGrid();
@@ -46,6 +50,5 @@ $('.changegrid').click(function() {
 function removeGrid() {
 	$('.box').remove();
 };
-
 
 });
