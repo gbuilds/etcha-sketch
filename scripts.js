@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	createGrid(10);
+	createGrid(8);
 
 // Creating a grid
 
@@ -34,9 +34,7 @@ $('.box').css("opacity", 1);
 // Prompt button asks for number of boxes
 
 $('.changegrid').click(function() {
-	console.log("test 1");
 	removeGrid();
-	console.log("test 2");
     createGrid(prompt("Enter a grid size 1-20"));
     $('.box').mouseenter(function() {
 	$(this).fadeTo("slow", .2);
