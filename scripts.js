@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	createGrid(prompt("Enter a grid size 1-20"));
+	createGrid(10);
 
 // Creating a grid
 
@@ -11,7 +11,7 @@ function createGrid(x) {
 	$('.wrap').append('<div class="box"></div>');
 	}
 
-// Sizing the boxes within wrap div
+// Sizing each box within wrap div
 
 	var boxSize = (500 / x);
 
@@ -19,10 +19,35 @@ function createGrid(x) {
 	$('.box').height(boxSize);
 };
 
-// Change div color on Mouse Enter
+// Fade div on mouse enter
 
 $('.box').mouseenter(function() {
 $(this).fadeTo("slow", .2);
 });
+
+// Reset button for all boxes
+
+$('.reset').click(function() {
+$('.box').css("opacity", 1);
+});
+
+// Prompt button asks for number of boxes
+
+$('.changegrid').click(function() {
+	console.log("test 1");
+	removeGrid();
+	console.log("test 2");
+    createGrid(prompt("Enter a grid size 1-20"));
+    $('.box').mouseenter(function() {
+	$(this).fadeTo("slow", .2);
+});
+});
+
+// Removing an old grid
+
+function removeGrid() {
+	$('.box').remove();
+};
+
 
 });
